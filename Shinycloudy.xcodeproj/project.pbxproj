@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */; };
-		DEBE4C661F8F808B00FF9C4E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C651F8F808B00FF9C4E /* ViewController.swift */; };
+		DEBE4C661F8F808B00FF9C4E /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C651F8F808B00FF9C4E /* WeatherVC.swift */; };
 		DEBE4C691F8F808B00FF9C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBE4C671F8F808B00FF9C4E /* Main.storyboard */; };
 		DEBE4C6B1F8F808B00FF9C4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEBE4C6A1F8F808B00FF9C4E /* Assets.xcassets */; };
 		DEBE4C6E1F8F808B00FF9C4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBE4C6C1F8F808B00FF9C4E /* LaunchScreen.storyboard */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		DEBE4C601F8F808B00FF9C4E /* Shinycloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shinycloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DEBE4C651F8F808B00FF9C4E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DEBE4C651F8F808B00FF9C4E /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		DEBE4C681F8F808B00FF9C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DEBE4C6A1F8F808B00FF9C4E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEBE4C6D1F8F808B00FF9C4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +54,38 @@
 		DEBE4C621F8F808B00FF9C4E /* Shinycloudy */ = {
 			isa = PBXGroup;
 			children = (
+				DEBE4C771F8F80E000FF9C4E /* Controller */,
+				DEBE4C761F8F80DA00FF9C4E /* View */,
+				DEBE4C751F8F80D300FF9C4E /* Model */,
 				DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */,
-				DEBE4C651F8F808B00FF9C4E /* ViewController.swift */,
-				DEBE4C671F8F808B00FF9C4E /* Main.storyboard */,
 				DEBE4C6A1F8F808B00FF9C4E /* Assets.xcassets */,
 				DEBE4C6C1F8F808B00FF9C4E /* LaunchScreen.storyboard */,
 				DEBE4C6F1F8F808B00FF9C4E /* Info.plist */,
 			);
 			path = Shinycloudy;
+			sourceTree = "<group>";
+		};
+		DEBE4C751F8F80D300FF9C4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEBE4C761F8F80DA00FF9C4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DEBE4C671F8F808B00FF9C4E /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DEBE4C771F8F80E000FF9C4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DEBE4C651F8F808B00FF9C4E /* WeatherVC.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBE4C661F8F808B00FF9C4E /* ViewController.swift in Sources */,
+				DEBE4C661F8F808B00FF9C4E /* WeatherVC.swift in Sources */,
 				DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +310,7 @@
 				DEBE4C741F8F808B00FF9C4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
