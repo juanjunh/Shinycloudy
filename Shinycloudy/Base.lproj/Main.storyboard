@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WeatherVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shinycloudy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherVC" customModule="Shinycloudy" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,57 +21,215 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2q-08-W4k">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="260"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="top" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="v4A-4K-8r9">
-                                        <rect key="frame" x="29" y="22" width="161" height="208"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="OL3-5P-AQP">
+                                        <rect key="frame" x="30" y="22" width="540" height="209"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Oct 12, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAy-6H-KfX">
-                                                <rect key="frame" x="0.0" y="0.0" width="145" height="20"/>
-                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="28.5 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-K8-T1v">
-                                                <rect key="frame" x="0.0" y="84" width="161" height="40"/>
-                                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Darwin, NT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBG-Jk-Wif">
-                                                <rect key="frame" x="0.0" y="188" width="121" height="20"/>
-                                                <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-2a-5nb">
-                                        <rect key="frame" x="225" y="22" width="150" height="209"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnd-n2-qUi">
-                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Shiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ5-lp-tq8">
-                                                <rect key="frame" x="37" y="180" width="76" height="29"/>
-                                                <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="v4A-4K-8r9">
+                                                <rect key="frame" x="0.0" y="0.0" width="258" height="209"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oct 12, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="CAy-6H-KfX">
+                                                        <rect key="frame" x="0.0" y="0.0" width="145" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28.5 °C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-K8-T1v">
+                                                        <rect key="frame" x="0.0" y="84" width="161" height="40"/>
+                                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Darwin, NT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="JBG-Jk-Wif">
+                                                        <rect key="frame" x="0.0" y="188" width="121" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="20"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cks-2a-5nb">
+                                                <rect key="frame" x="283" y="0.0" width="257" height="209"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qnd-n2-qUi">
+                                                        <rect key="frame" x="53" y="0.0" width="150" height="150"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="150" id="9yD-KX-aYe"/>
+                                                            <constraint firstAttribute="height" constant="150" id="Mcf-aM-8vu"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Shiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ5-lp-tq8">
+                                                        <rect key="frame" x="90" y="180" width="76" height="29"/>
+                                                        <fontDescription key="fontDescription" name="CourierNewPS-BoldMT" family="Courier New" pointSize="25"/>
+                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="NZ5-lp-tq8" secondAttribute="bottom" id="BKu-EJ-19n"/>
+                                                    <constraint firstItem="Qnd-n2-qUi" firstAttribute="leading" secondItem="Cks-2a-5nb" secondAttribute="leading" constant="53" id="KXd-hP-qlt"/>
+                                                    <constraint firstItem="NZ5-lp-tq8" firstAttribute="top" secondItem="Qnd-n2-qUi" secondAttribute="bottom" constant="30" id="RhM-oa-6nH"/>
+                                                    <constraint firstItem="Qnd-n2-qUi" firstAttribute="top" secondItem="Cks-2a-5nb" secondAttribute="top" id="jXd-xN-rB1"/>
+                                                    <constraint firstItem="NZ5-lp-tq8" firstAttribute="top" secondItem="Qnd-n2-qUi" secondAttribute="bottom" constant="30" id="o4F-RF-xtB"/>
+                                                </constraints>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="KXd-hP-qlt"/>
+                                                        <exclude reference="jXd-xN-rB1"/>
+                                                        <exclude reference="BKu-EJ-19n"/>
+                                                        <exclude reference="RhM-oa-6nH"/>
+                                                        <exclude reference="o4F-RF-xtB"/>
+                                                    </mask>
+                                                </variation>
+                                            </stackView>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.69091899522157607" green="0.87275323076274824" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="260" id="1EM-AV-hsc"/>
+                                    <constraint firstAttribute="trailing" secondItem="OL3-5P-AQP" secondAttribute="trailing" constant="224" id="83z-o2-USx"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="top" secondItem="O2q-08-W4k" secondAttribute="top" constant="22" id="PvD-5m-Y0y"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="centerY" secondItem="O2q-08-W4k" secondAttribute="centerY" id="XQ0-6K-kJ8"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="centerX" secondItem="O2q-08-W4k" secondAttribute="centerX" id="XX2-HB-aQ5"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="leading" secondItem="O2q-08-W4k" secondAttribute="leading" constant="30" id="dEo-cJ-uG7"/>
+                                    <constraint firstAttribute="bottom" secondItem="OL3-5P-AQP" secondAttribute="bottom" constant="29" id="pjO-W5-dpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="OL3-5P-AQP" secondAttribute="trailing" constant="30" id="rvg-Dm-KBh"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="leading" secondItem="O2q-08-W4k" secondAttribute="leading" constant="29" id="s9E-ti-FPV"/>
+                                    <constraint firstAttribute="bottom" secondItem="OL3-5P-AQP" secondAttribute="bottom" constant="29" id="tXa-u3-1Wh"/>
+                                    <constraint firstItem="OL3-5P-AQP" firstAttribute="top" secondItem="O2q-08-W4k" secondAttribute="top" constant="22" id="vkR-ql-eKY"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="83z-o2-USx"/>
+                                        <exclude reference="XQ0-6K-kJ8"/>
+                                        <exclude reference="pjO-W5-dpT"/>
+                                        <exclude reference="s9E-ti-FPV"/>
+                                        <exclude reference="vkR-ql-eKY"/>
+                                    </mask>
+                                </variation>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1FS-h4-DDU">
+                                <rect key="frame" x="0.0" y="260" width="600" height="340"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="380" id="h7a-IY-zJQ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="weatherCell" rowHeight="80" id="Fxg-tp-brs">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="Fxg-tp-brs" id="xAy-ip-7Ro">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xh-zc-ptv">
+                                                    <rect key="frame" x="22" y="10" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="8jx-jS-KJ7"/>
+                                                        <constraint firstAttribute="width" constant="60" id="ZyQ-ao-qy0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="XJQ-Kj-v6S">
+                                                    <rect key="frame" x="96" y="20" width="482" height="40"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qlg-gT-BZ6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="231" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLG-l7-L8W">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Courier-Bold" family="Courier" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Cloudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3i-eo-aQt">
+                                                                    <rect key="frame" x="0.0" y="24" width="231" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0wm-eO-rPF">
+                                                            <rect key="frame" x="251" y="0.0" width="231" height="40"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="34°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAV-HD-EMu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="231" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="26°C" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5y-qj-I4l">
+                                                                    <rect key="frame" x="0.0" y="24" width="231" height="16"/>
+                                                                    <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XJQ-Kj-v6S" firstAttribute="top" secondItem="xAy-ip-7Ro" secondAttribute="topMargin" constant="-4" id="2n2-fF-3yt"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XJQ-Kj-v6S" secondAttribute="bottom" constant="-5" id="3S6-oT-2lJ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XJQ-Kj-v6S" secondAttribute="trailing" constant="10" id="3eH-dv-0of"/>
+                                                <constraint firstItem="XJQ-Kj-v6S" firstAttribute="leading" secondItem="5xh-zc-ptv" secondAttribute="trailing" constant="10" id="UZ1-Yc-IWW"/>
+                                                <constraint firstItem="5xh-zc-ptv" firstAttribute="leading" secondItem="xAy-ip-7Ro" secondAttribute="leadingMargin" constant="14" id="X4f-Vu-V58"/>
+                                                <constraint firstItem="5xh-zc-ptv" firstAttribute="top" secondItem="xAy-ip-7Ro" secondAttribute="topMargin" constant="2" id="bZc-AX-AJy"/>
+                                                <constraint firstItem="XJQ-Kj-v6S" firstAttribute="leading" secondItem="5xh-zc-ptv" secondAttribute="trailing" constant="14" id="c0N-HJ-X66"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XJQ-Kj-v6S" secondAttribute="trailing" constant="14" id="f4L-IV-zcC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5xh-zc-ptv" secondAttribute="bottom" constant="2" id="vmh-dd-HcF"/>
+                                                <constraint firstItem="XJQ-Kj-v6S" firstAttribute="centerY" secondItem="5xh-zc-ptv" secondAttribute="centerY" id="xWx-ka-4WU"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="2n2-fF-3yt"/>
+                                                    <exclude reference="3S6-oT-2lJ"/>
+                                                    <exclude reference="3eH-dv-0of"/>
+                                                    <exclude reference="UZ1-Yc-IWW"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="h7a-IY-zJQ"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1FS-h4-DDU" firstAttribute="top" secondItem="O2q-08-W4k" secondAttribute="bottom" id="5Qv-B2-Tdg"/>
+                            <constraint firstItem="1FS-h4-DDU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="5rK-87-Vhe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1FS-h4-DDU" secondAttribute="bottom" id="FIt-Og-Hv4"/>
                             <constraint firstItem="O2q-08-W4k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Ldj-WY-aiZ"/>
                             <constraint firstItem="O2q-08-W4k" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="P2b-19-BLm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1FS-h4-DDU" secondAttribute="trailing" constant="-20" id="aSB-Vu-bi2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1FS-h4-DDU" secondAttribute="bottom" id="gJf-I3-xQk"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O2q-08-W4k" secondAttribute="trailing" constant="-20" id="rwa-ed-s8W"/>
+                            <constraint firstItem="1FS-h4-DDU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tPN-sG-nxi"/>
+                            <constraint firstItem="1FS-h4-DDU" firstAttribute="top" secondItem="O2q-08-W4k" secondAttribute="bottom" id="x3Z-gH-BJM"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5rK-87-Vhe"/>
+                                <exclude reference="x3Z-gH-BJM"/>
+                                <exclude reference="gJf-I3-xQk"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="currentTempLbl" destination="5hG-K8-T1v" id="Xre-XI-fuz"/>
+                        <outlet property="currentWeatherImage" destination="Qnd-n2-qUi" id="PAK-UK-jlc"/>
+                        <outlet property="dateLbl" destination="CAy-6H-KfX" id="IlS-w8-lT7"/>
+                        <outlet property="locationLbl" destination="JBG-Jk-Wif" id="LHX-VS-0Xh"/>
+                        <outlet property="weatherTableView" destination="1FS-h4-DDU" id="crF-PD-B5g"/>
+                        <outlet property="weatherTypeLbl" destination="NZ5-lp-tq8" id="aoO-q7-9Ak"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
