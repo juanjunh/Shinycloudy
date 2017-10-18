@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE918BB51F96F99D007652C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE918BB41F96F99D007652C3 /* Constants.swift */; };
+		DE918BB71F96FD8A007652C3 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */; };
 		DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */; };
 		DEBE4C661F8F808B00FF9C4E /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C651F8F808B00FF9C4E /* WeatherVC.swift */; };
 		DEBE4C691F8F808B00FF9C4E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEBE4C671F8F808B00FF9C4E /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE918BB41F96F99D007652C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		DEBE4C601F8F808B00FF9C4E /* Shinycloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shinycloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEBE4C651F8F808B00FF9C4E /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
@@ -68,6 +72,8 @@
 		DEBE4C751F8F80D300FF9C4E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DE918BB41F96F99D007652C3 /* Constants.swift */,
+				DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 			files = (
 				DEBE4C661F8F808B00FF9C4E /* WeatherVC.swift in Sources */,
 				DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */,
+				DE918BB71F96FD8A007652C3 /* CurrentWeather.swift in Sources */,
+				DE918BB51F96F99D007652C3 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
