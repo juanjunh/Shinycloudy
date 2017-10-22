@@ -52,7 +52,46 @@ class CurrentWeather{
         return _currentTemp
     }
     
-}
+    //func downloadweatherDetails(complpeted: downloadComplete){
+        //alamofire download
+        
+        //let currentWeatherURL = NSMetadataItemURLKey (CURRENT_WEATHER_URL)!
+        //swift 8.0 以上為URL, 這裡7.0版本找不到是哪個
+        
+        //alamofire.request(.GET, currentWeatherURL).responseJSON { response in
+        //let result = response.result }
+    
+//    if let dict = result.value as? Dictionary <string, anyobject> {
+//        if let name = dict["name"] as? String{
+//            self._cityName = name.capitalized
+//            
+//        }
+//        if let weather = dict["weather"] as? [Dictionary<String, AnyObject>]{
+//            if let main = weather[0]["main"] as? String {
+//                self._weatherType = main.capitalized
+//            }
+//        }
+//        if let main = dict["main"] as? Dictionary<String, AnyObject> {
+//            if let currentTemp = main["temp"] as? Double {
+//                let kelvinToCelsiusPreDiv = currentTemp - 273.15
+//                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusPreDiv)/10)
+//                self._currentTemp = kelvinToCelsius
+//                
+//            }
+//        }
+//        
+//    }
+    
+    
+        //completed()
+            
+        
+    
+        
+    }
+    
+    
+
 
 
 
