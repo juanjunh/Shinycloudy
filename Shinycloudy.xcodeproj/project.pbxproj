@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE847BAE1FA0A342001652DD /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE847BAD1FA0A342001652DD /* Forecast.swift */; };
 		DE918BB51F96F99D007652C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE918BB41F96F99D007652C3 /* Constants.swift */; };
 		DE918BB71F96FD8A007652C3 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */; };
 		DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBE4C631F8F808B00FF9C4E /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DE847BAD1FA0A342001652DD /* Forecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		DE918BB41F96F99D007652C3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		DEBE4C601F8F808B00FF9C4E /* Shinycloudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shinycloudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 			children = (
 				DE918BB41F96F99D007652C3 /* Constants.swift */,
 				DE918BB61F96FD8A007652C3 /* CurrentWeather.swift */,
+				DE847BAD1FA0A342001652DD /* Forecast.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEBE4C661F8F808B00FF9C4E /* WeatherVC.swift in Sources */,
+				DE847BAE1FA0A342001652DD /* Forecast.swift in Sources */,
 				DEBE4C641F8F808B00FF9C4E /* AppDelegate.swift in Sources */,
 				DE918BB71F96FD8A007652C3 /* CurrentWeather.swift in Sources */,
 				DE918BB51F96F99D007652C3 /* Constants.swift in Sources */,
