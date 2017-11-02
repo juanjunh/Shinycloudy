@@ -46,9 +46,9 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            //download forecast data for tableview
             
         let forecastURL = URL(String: FORECAST_URL)!
-            alamofire.request(.GET, forecastURL).responseJSON {
-                response in
-        let result = response.result
+            alamofire.request(.GET, forecastURL).responseJSON { response in
+                
+                let result = response.result
         
                 if let dict = result.value as? Dictionary<String, AnyObject>{
                     if let list = dict["list"] as? [Dictionary<String, AnyObject>]{

@@ -45,7 +45,33 @@ class Forecast {
         return _lowTemp
     }
 
-}
+    init (weatherDict: Dictionary<String, AnyObject>) {
+        
+        if let temp = weatherDict["temp"] as? Dictionary<String, AnyObject> {
+            if let min = temp["min"] as? Double {
+                let kelvinToCelsiusPreDiv = min - 273.15
+                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusPreDiv)/10)
+                self._lowTemp = "\(kelvinToCelsius)"
+            }
+            
+            if let max = temp["max"] as? Double {
+                let kelvinToCelsiusPreDiv = max - 273.15
+                let kelvinToCelsius = Double(round(10 * kelvinToCelsiusPreDiv)/10)
+                self._highTemp = "\(kelvinToCelsius)"
+            }
+                
+                
+            }
+        if let weather = weatherDict["weather"] as? [Dictionary<String, AnyObject>] {
+            
+        }
+            
+        }
+        
+        
+    }
+    
+
 
 
 
@@ -53,7 +79,7 @@ var forecast: Forecast!
 
 override func viewDidLoad() {
     super.viewDidLoad()
-forecast = Forecast()
+    forecast = Forecast()
 }
 
 func downloadForecastData(completed: downloadcompleted) {
