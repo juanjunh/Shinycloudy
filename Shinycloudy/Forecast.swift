@@ -63,14 +63,33 @@ class Forecast {
                 
             }
         if let weather = weatherDict["weather"] as? [Dictionary<String, AnyObject>] {
-            
+            if let main = weather[0]["main"] as? String {
+                self._weatherType = main
+            }
         }
+        if let date = weatherDict["dt"] as? Double {
+            let unixConvertedDate = NSDate(NSTimeIntervalSince1970)
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .FullStyle
+            dateFormatter.dateformat = "EEEE"
+            dateFormatter.timeStyle = .NoStyle
+            self._date = unixConvertedDate.dayOfTheWeek()
+            
             
         }
         
+            
+        }
+    
+    }
+extension NSDate {
+    func dayOfTheWeek() -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateformat = "EEEE"  //means showing full details of the date
+        return dateFormatter.stringFromDate(self)
         
     }
-    
+}
 
 
 

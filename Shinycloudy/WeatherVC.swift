@@ -36,9 +36,11 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         weatherTableView.dataSource = self
         
         currentweather = CurrentWeather()
-        forecast = Forecast()
+//        forecast = Forecast()
 //        currentweather.downloadweatherDetails {
-//          self.updateMainUI()
+//        sefl.downloadForcastData{
+//          self.updatedUI()
+        
 //        }
         
         
