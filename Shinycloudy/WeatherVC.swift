@@ -58,6 +58,8 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                             let forecast = Forecast(weatherDict: obj)
                             self.forecasts.append(forecast)
                         }
+                        self.forecasts.removeAtIndex(0)
+                        self.tableView.reloadData()
                     }
                 }
                 
@@ -83,13 +85,18 @@ class WeatherVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return forecasts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = weatherTableView.dequeueReusableCellWithIdentifier("weatherCell", forIndexPath: indexPath)
-        return cell
-    
+        if let cell = weatherTableView.dequeueReusableCellWithIdentifier("weatherCell", forIndexPath: indexPath) as? WeatherCell {
+            let forecast = forecasts[indexPath.row]
+            cell.configureCell(forecast: forecast)
+            return cell
+        } else {
+            return WeatherCell()
+        }
+
     }
     
     
